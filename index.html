@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Thrift Fashion Store</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="py-md-3 py-2 fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 d-flex justify-content-between align-items-center">
+                    <a href="#" class="navbar-logo">
+                        <img src="assets/img/logo.png" alt="">
+                    </a>
+                    <nav class="navbar navbar-expand-lg p-0">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBS" aria-controls="navbarBS" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                    </nav>
+                </div>
+                <div class="col">
+                    <div class="top-bar">
+                        <div class="border-bottom pb-2">
+                            Welcome : <span id="username">Arshan</span>
+                        </div>
+                        <div class="border-bottom pb-2">|</div>
+                        <div class="border-bottom pb-2">
+                            Visitor : <span id="usercount">0</span>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-expand-lg p-0">
+
+                        <div class="collapse navbar-collapse" id="navbarBS">
+                            <ul class="navbar-nav new-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" onclick="pageroutes('home')">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" onclick="pageroutes('about')">About us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" onclick="pageroutes('all')">Products</a>
+                                </li>
+                                <!-- <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Products
+                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li> -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" onclick="pageroutes('contact')">Contact us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" onclick="pageroutes('feedback')">Feedback</a>
+                                </li>
+                                <li class="nav-item d-none">
+                                    <a class="nav-link" href="#" onclick="pageroutes('feedback')">Feedback</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item ms-auto" id="logoutBtn">
+                                </li>
+                                <li class="nav-item">
+                                    <!-- <a class="nav-link" href="#"></a> -->
+                                    <a href="#" class="nav-link position-relative" onclick="pageroutes('cart')">
+                                        <i class="fa-solid fa-basket-shopping me-2"></i> Cart
+                                        <span class="position-absolute top-50 start-100 ms-2 translate-middle badge rounded-pill bg-danger" id="cart-count">
+                                          0
+                                          <span class="visually-hidden">unread messages</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- header end-->
+
+    <!-- Main Pages -->
+    <main id="pages"></main>
+    <!-- Main Pages End -->
+
+    <!-- Services items -->
+    <section class="serivces">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card">
+                        <i class="fa-solid fa-truck"></i>
+                        <h5>Free Delivery</h5>
+                        <p>And free returns. See checkout for delivery dates.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <h5>Safe Payment</h5>
+                        <p>Pay with the world's most popular and secure payment methods.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h5>Shop with Confidence</h5>
+                        <p>Our Buyer Protection covers your purchasefrom click to delivery.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 d-lg-block d-md-none d-block">
+                    <div class="card">
+                        <i class="fa-solid fa-circle-question"></i>
+                        <h5>24/7 Help Center</h5>
+                        <p>Have a question? Call a Specialist or chat online.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services items end -->
+
+    <!-- Scrolling ticker -->
+    <div class="ticker">
+        <marquee scrollamount="5">
+            <p class="m-0"><span id="ticker"></span><span id="ticker-location"></span></p>
+        </marquee>
+    </div>
+    <!-- Scrolling ticker end -->
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 mb-4">
+                    <a href="#" class="navbar-logo"><img src="assets/img/logo.png" alt=""></a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <h6>Contact</h6>
+                    <div class="mb-3">
+                        <p class="mb-0">Phone</p>
+                        <a href="tel:+1233456789" class="small">+123 345 6789</a>
+                    </div>
+                    <div>
+                        <p class="mb-0">Email</p>
+                        <a href="mailto:gentleman-six@thirftstore.com" class="small">gentleman-six@thirftstore.com</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 mb-4">
+                    <h6>Useful Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" onclick="pageroutes('about')">About</a></li>
+                        <li><a href="#" onclick="pageroutes('all')">Products</a></li>
+                        <li><a href="#" onclick="pageroutes('contact')">Contact</a></li>
+                        <li><a href="#" onclick="pageroutes('feedback')">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-2 col-sm-6 mb-4">
+                    <h6>Categories</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" onclick="pageroutes('men')">Mens</a></li>
+                        <li><a href="#" onclick="pageroutes('women')">Womens</a></li>
+                        <li><a href="#" onclick="pageroutes('jeans')">Jeans</a></li>
+                        <li><a href="#" onclick="pageroutes('tshirts')">T-Shirts</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 copy-right">
+                    <p class="m-0">&copy; 2022, All rights reserved to <a href="#">Thrift Fashion Store</a>. Developed by Gentleman 6 Team.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="inputPopup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="inputPopupLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="row">
+                        <div class="col-12">
+                            <img src="assets/img/mid-card2.png" class="w-100" alt="">
+                        </div>
+                        <div class="col-12 p-5">
+                            <p class="mb-0">Welcome to Thrift Fashion Store</p>
+                            <div class="display-6">Enter you name</div>
+                            <div class="input-group mt-3 mb-1">
+                                <input type="text" class="form-control" placeholder="e.g Arshan" id="inputText">
+                                <button class="btn btn-cat" type="button" id="inputButton" onclick="saveName()">Submit</button>
+                            </div>
+                            <small class="text-danger invisible mb-3" id="invalidName">Please enter correct name</small>
+                            <p>We respect your privacy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- thank you modal -->
+<div class="modal fade" id="modal12" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal12Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="text-end">
+                    <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="row">
+                    <div class="col-12 my-5 py-2 mx-auto d-flex flex-column justify-content-center align-items-center">
+                        <div class="col-lg-2 ">
+                            <i class="fa-solid fa-square-check fa-6x py-3 me-1 text-danger"></i>
+                        </div>
+                        <h1 class="text-center mb-2">THANK YOU!</h1>
+                        <h5 class="text-center mb-5">Your Submission has been sent</h5>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
+<!-- JavaScript Bundle with Popper -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<!-- json data files -->
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>

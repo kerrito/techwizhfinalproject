@@ -1,0 +1,49 @@
+<!-- Page title -->
+<section class="page-title">
+    <div class="container">
+        <h1 class="display-2" id="title">Cart</h1>
+    </div>
+</section>
+<!-- Page title end -->
+
+
+<!-- product items -->
+<section class="feature">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <table class="table table-striped cart-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Image</th>
+                            <th>Product</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartData">
+                    </tbody>
+
+                </table>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-body">
+                    <h1 class="display-6">Order Summary</h1>
+<!-- <form action=""> -->
+                    <div class="my-3 pb-4 border-bottom">
+                        <h5 class="mb-3">Shipping Address</h5>
+                        <textarea id="shippingaddress_test" class="form-control" rows="5" required></textarea>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <h1 class="h4">Total</h1>
+                        <h1 class="h4 text-danger" id="totalAmount">0.00</h1>
+                    </div>
+                    <button class="btn my-btn mt-4" onclick="checkout()">Checkout</button>
+                <!-- </form> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- product items end -->
+

@@ -1,0 +1,89 @@
+<!-- slider -->
+<div id="ourSliderCarousel" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="assets/img/banner-1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <p class="mb-0 fs-2">Welcome to.</p>
+                <h1 class="display-4">Thrift Fashion Store</h1>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="assets/img/banner-2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 class="display-4">Second slide label</h1>
+                <p>Some representative placeholder content for the second slide.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#ourSliderCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#ourSliderCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<!-- slider end -->
+
+<!-- category -->
+<section class="category">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                <a href="#" class="card" onclick="pageroutes('jeans')">
+                    <img src="assets/img/card.jpg" alt="">
+                    <div class="card-body">
+                        <div class="display-6">Jeans</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                <a href="#" class="card" onclick="pageroutes('tshirts')">
+                    <img src="assets/img/card2.webp" alt="">
+                    <div class="card-body">
+                        <div class="display-6">T-shirts</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                <a href="#" class="card" onclick="pageroutes('shoes')">
+                    <img src="assets/img/card3.webp" alt="">
+                    <div class="card-body">
+                        <div class="display-6">Shoes</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                <a href="#" class="card" onclick="pageroutes('shirts')">
+                    <img src="assets/img/card4.jpg" alt="">
+                    <div class="card-body">
+                        <div class="display-6">Shirts</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- category end -->
+
+<!-- feature items -->
+<section class="feature">
+    <div class="container">
+        <h4 class="display-6 mb-5">Featured Items</h4>
+        <div class="row" id="featureCards">
+        </div>
+    </div>
+</section>
+<!-- feature items end -->
+
+<!-- Popular items -->
+<section class="feature bg-new">
+    <div class="container">
+        <h4 class="display-6 mb-5">Popular Items</h4>
+        <div class="row" id="popularCards">
+        </div>
+    </div>
+</section>
+<!-- Popular items end -->
